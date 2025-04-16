@@ -16,7 +16,11 @@ export default function Home() {
         que você cria, seleciona e vende a partir do seu perfil de mídia social.
       </h2>
       <Link href="/login">
-        <Button text="Quero meu link personalizado!" />
+        <Button
+          text="Quero meu link personalizado!"
+          onClick={() => {}}
+          type="button"
+        />
       </Link>
     </div>
   );
