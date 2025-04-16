@@ -1,4 +1,3 @@
-import { auth } from "@/app/lib/auth";
 import stripe from "@/app/lib/stripe";
 import { NextRequest, NextResponse } from "next/server";
 

@@ -1,4 +1,10 @@
-const Button = (props: any) => {
+export interface ButtonProps {
+  type: "submit";
+  text: string;
+  onClick: () => void;
+}
+
+const Button = (props: ButtonProps) => {
   return (
     <button
       onClick={props.onClick}

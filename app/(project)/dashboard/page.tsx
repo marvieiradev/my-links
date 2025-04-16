@@ -1,7 +1,6 @@
 import { handleAuth } from "@/app/actions/handle-auth";
 import Button from "@/app/components/button";
 import { auth } from "@/app/lib/auth";
-import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 
 export default async function Dashboard() {
@@ -15,7 +14,7 @@ export default async function Dashboard() {
       </p>
       {session?.user?.email && (
         <form action={handleAuth}>
-          <Button text="Sair" type="submit" />
+          <Button text="Sair" type="submit" onClick={() => {}} />
         </form>
       )}
 
