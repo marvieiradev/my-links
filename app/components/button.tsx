@@ -1,3 +1,4 @@
+"use client";
 export interface ButtonProps {
   type: "submit" | "button";
   text: string;
