@@ -15,14 +15,17 @@ export default function Payments() {
         <Button
           onClick={() => createPaymentStripeCheckout({ testeId: "123" })}
           text="Pagamento Stripe"
+          type="button"
         />
         <Button
           onClick={() => createSubscriptionStripeCheckout({ testeId: "123" })}
           text="Criar Assinatura Stripe"
+          type="button"
         />
         <Button
           onClick={handleCreateStripePortal}
           text="Criar Portal de Pagamentos"
+          type="button"
         />
       </div>
     </div>
