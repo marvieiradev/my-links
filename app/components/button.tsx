@@ -1,7 +1,7 @@
 export interface ButtonProps {
   type: "submit";
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = (props: ButtonProps) => {
