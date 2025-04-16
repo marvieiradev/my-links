@@ -12,21 +12,17 @@ export default function Payments() {
     <div className="flex flex-col justify-center items-center h-screen gap-8 max-w-[800px] m-auto p-4">
       <h1 className="text-2xl">Pagamentos</h1>
       <div className="flex gap-2">
-        <Button
-          onClick={() => createPaymentStripeCheckout({ testeId: "123" })}
-          text="Pagamento Stripe"
-          type="button"
-        />
-        <Button
+        <div onClick={() => createPaymentStripeCheckout({ testeId: "123" })}>
+          <Button text="Pagamento Stripe" type="button" />
+        </div>
+        <div
           onClick={() => createSubscriptionStripeCheckout({ testeId: "123" })}
-          text="Criar Assinatura Stripe"
-          type="button"
-        />
-        <Button
-          onClick={handleCreateStripePortal}
-          text="Criar Portal de Pagamentos"
-          type="button"
-        />
+        >
+          <Button text="Criar Assinatura Stripe" type="button" />
+        </div>
+        <div onClick={handleCreateStripePortal}>
+          <Button text="Criar Portal de Pagamentos" type="button" />
+        </div>
       </div>
     </div>
   );

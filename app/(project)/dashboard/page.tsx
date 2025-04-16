@@ -14,7 +14,7 @@ export default async function Dashboard() {
       </p>
       {session?.user?.email && (
         <form action={handleAuth}>
-          <Button text="Sair" type="submit" onClick={() => {}} />
+          <Button text="Sair" type="submit" />
         </form>
       )}
 
