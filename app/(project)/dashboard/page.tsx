@@ -2,9 +2,14 @@ import { handleAuth } from "@/app/actions/handle-auth";
 import Button from "@/app/components/button";
 import { auth } from "@/app/lib/auth";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
   const session = await auth();
+
+  if (!session) {
+    redirect("/");
+  }
 
   return (
     <div className="flex flex-col justify-center items-center h-screen gap-8 max-w-[800px] m-auto p-4">
