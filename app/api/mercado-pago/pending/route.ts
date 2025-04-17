@@ -1,5 +1,4 @@
 import mpClient from "@/app/lib/mercado-pago";
-import { error } from "console";
 import { Payment } from "mercadopago";
 import { NextRequest, NextResponse } from "next/server";
 
