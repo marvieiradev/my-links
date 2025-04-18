@@ -1,7 +1,7 @@
 "use client";
-import Button from "@/app/components/button";
 import useMercadoPago from "@/app/hooks/useMercadoPago";
 import { useStripe } from "@/app/hooks/useStripe";
+import { Button } from "@/components/ui/button";
 
 export default function Payments() {
   const {
@@ -13,19 +13,16 @@ export default function Payments() {
   const { createMercadoPagoCheckout } = useMercadoPago();
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen gap-8 max-w-[800px] m-auto p-4">
+    <div className="flex flex-col justify-center items-center gap-8 max-w-[800px] m-auto p-4">
       <h1 className="text-2xl">Pagamentos</h1>
-      <div className="flex gap-2">
+      <div className="flex flex-col gap-2 justify-center items-center">
         <div onClick={() => createPaymentStripeCheckout({ testeId: "123" })}>
-          <Button text="Pagamento Stripe" type="button" />
+          <Button>Pagar com Stripe</Button>
         </div>
         <div
           onClick={() => createSubscriptionStripeCheckout({ testeId: "123" })}
         >
-          <Button text="Criar Assinatura Stripe" type="button" />
-        </div>
-        <div onClick={handleCreateStripePortal}>
-          <Button text="Criar Portal de Pagamentos" type="button" />
+          <Button>Assinar com Stripe</Button>
         </div>
 
         <div
@@ -36,7 +33,11 @@ export default function Payments() {
             })
           }
         >
-          <Button text="Criar Pagamento Mercado Pago" type="button" />
+          <Button>Pagar com Mercado Pago</Button>
+        </div>
+
+        <div onClick={handleCreateStripePortal}>
+          <Button variant="outline">Portal de Pagamentos</Button>
         </div>
       </div>
     </div>

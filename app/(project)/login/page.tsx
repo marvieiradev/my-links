@@ -1,6 +1,6 @@
 import { handleAuth } from "@/app/actions/handle-auth";
-import Button from "@/app/components/button";
 import { auth } from "@/app/lib/auth";
+import { Button } from "@/components/ui/button";
 import { redirect } from "next/navigation";
 
 export default async function Login() {
@@ -15,7 +15,7 @@ export default async function Login() {
       </h1>
       <h2 className="text-2xl">Faça login para começar</h2>
       <form action={handleAuth}>
-        <Button text="Signin with Google" type="submit" />
+        <Button type="submit">Login</Button>
       </form>
     </div>
   );
