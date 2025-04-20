@@ -6,37 +6,24 @@ import { Button } from "./ui/button";
 
 interface FormLinksProps {
   userId: string;
+  title: string;
+  subtitle: string;
 }
 
-const FormLinks = () => {
-  const [user, setUser] = useState("");
-  const [title, setTitle] = useState("");
-  const [subtitle, setSubtitle] = useState("");
-  const [tiltleLink1, setTiltleLink1] = useState("");
-  const [urlLink1, setUrlLink1] = useState("");
-  const [tiltleLink2, setTiltleLink2] = useState("");
-  const [urlLink2, setUrlLink2] = useState("");
-  const [tiltleLink3, setTiltleLink3] = useState("");
-  const [urlLink3, setUrlLink3] = useState("");
-  const [tiltleLink4, setTiltleLink4] = useState("");
-  const [urlLink4, setUrlLink4] = useState("");
+const FormLinks = (props: FormLinksProps) => {
+  const [user, setUser] = useState(props.userId);
+  const [title, setTitle] = useState(props.title);
+  const [subtitle, setSubtitle] = useState(props.subtitle);
+  const [tiltleLink1, setTiltleLink1] = useState("Intagram");
+  const [urlLink1, setUrlLink1] = useState("https://www.instagram.com");
+  const [tiltleLink2, setTiltleLink2] = useState("Twitch");
+  const [urlLink2, setUrlLink2] = useState("https://www.twitch.com");
+  const [tiltleLink3, setTiltleLink3] = useState("Linkedin");
+  const [urlLink3, setUrlLink3] = useState("https://www.linkedin.com");
+  const [tiltleLink4, setTiltleLink4] = useState("Github");
+  const [urlLink4, setUrlLink4] = useState("https://www.github.com");
 
-  const handleSave = () => {
-    const links = {
-      u: user,
-      t: title,
-      sub: subtitle,
-      tl1: tiltleLink1,
-      ul1: urlLink1,
-      tl2: tiltleLink2,
-      ul2: urlLink2,
-      tl3: tiltleLink3,
-      ul3: urlLink3,
-      tl4: tiltleLink4,
-      ul4: urlLink4,
-    };
-    console.log(links.u);
-  };
+  const handleSave = () => {};
 
   return (
     <>
@@ -71,8 +58,16 @@ const FormLinks = () => {
           <div className="w-full">
             <Label className="text-base mb-2">Detalhes do link #1</Label>
             <div className="flex flex-col md:flex-row gap-2">
-              <Input placeholder="Título do link" />
-              <Input placeholder="Url do link" />
+              <Input
+                placeholder="Título do link"
+                value={tiltleLink1}
+                onChange={(e) => setTiltleLink1(e.target.value)}
+              />
+              <Input
+                placeholder="Url do link"
+                value={urlLink1}
+                onChange={(e) => setUrlLink1(e.target.value)}
+              />
             </div>
           </div>
         </div>
@@ -81,8 +76,16 @@ const FormLinks = () => {
           <div className="w-full">
             <Label className="text-base mb-2">Detalhes do link #2</Label>
             <div className="flex flex-col md:flex-row gap-2">
-              <Input placeholder="Título do link" />
-              <Input placeholder="Url do link" />
+              <Input
+                placeholder="Título do link"
+                value={tiltleLink2}
+                onChange={(e) => setTiltleLink2(e.target.value)}
+              />
+              <Input
+                placeholder="Url do link"
+                value={urlLink2}
+                onChange={(e) => setUrlLink2(e.target.value)}
+              />
             </div>
           </div>
         </div>
@@ -91,8 +94,16 @@ const FormLinks = () => {
           <div className="w-full">
             <Label className="text-base mb-2">Detalhes do link #3</Label>
             <div className="flex flex-col md:flex-row gap-2">
-              <Input placeholder="Título do link" />
-              <Input placeholder="Url do link" />
+              <Input
+                placeholder="Título do link"
+                value={tiltleLink3}
+                onChange={(e) => setUrlLink3(e.target.value)}
+              />
+              <Input
+                placeholder="Url do link"
+                value={urlLink3}
+                onChange={(e) => setUrlLink3(e.target.value)}
+              />
             </div>
           </div>
         </div>
@@ -101,8 +112,16 @@ const FormLinks = () => {
           <div className="w-full">
             <Label className="text-base mb-2">Detalhes do link #4</Label>
             <div className="flex flex-col md:flex-row gap-2">
-              <Input placeholder="Título do link" />
-              <Input placeholder="Url do link" />
+              <Input
+                placeholder="Título do link"
+                value={tiltleLink4}
+                onChange={(e) => setTiltleLink4(e.target.value)}
+              />
+              <Input
+                placeholder="Url do link"
+                value={urlLink4}
+                onChange={(e) => setUrlLink4(e.target.value)}
+              />
             </div>
           </div>
         </div>

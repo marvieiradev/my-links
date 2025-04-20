@@ -8,7 +8,6 @@ import SidebarSheet from "./sidebar-sheet";
 
 interface HeaderProps {
   image: string;
-  name: string;
 }
 
 const Header = (props: HeaderProps) => {
@@ -19,7 +18,7 @@ const Header = (props: HeaderProps) => {
           <Link href="/">
             <Image src="/vercel.svg" height={18} width={18} alt="logo" />
           </Link>
-          <p>{props.name}</p>
+          <p>Dashboard</p>
 
           <Sheet>
             <SheetTrigger asChild>
@@ -27,7 +26,7 @@ const Header = (props: HeaderProps) => {
                 <img
                   className="w-[30px] h-[30px] rounded-full"
                   src={props.image}
-                  alt={props.name}
+                  alt="avatar"
                 />
                 <MenuIcon />
               </Button>
