@@ -16,7 +16,7 @@ const Header = (props: HeaderProps) => {
       <Card className="rounded-t-none p-2 border-2 border-b-indigo-500 bg-background">
         <CardContent className="flex flex-row justify-between items-center">
           <Link href="/">
-            <Image src="/vercel.svg" height={18} width={18} alt="logo" />
+            <Image src="/my-logo.svg" height={26} width={26} alt="logo" />
           </Link>
           <p>Dashboard</p>
 
