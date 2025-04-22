@@ -46,7 +46,7 @@ const Header = (props: HeaderProps) => {
                 className="z-50 absolute top-12 right-6 w-[100px] h-[70px] bg-white shadow-md flex flex-col justify-center items-start"
                 onMouseLeave={() => setMenuIsOpen(false)}
               >
-                <Link href="/my-trips" onClick={() => setMenuIsOpen(false)}>
+                <div onClick={() => setMenuIsOpen(false)}>
                   <button
                     className="text-indigo-500 text-base font-semibold cursor-pointer"
                     onClick={toPayments}
@@ -56,7 +56,7 @@ const Header = (props: HeaderProps) => {
                       Planos
                     </div>
                   </button>
-                </Link>
+                </div>
 
                 <button
                   className="text-indigo-500 text-base font-semibold cursor-pointer"
