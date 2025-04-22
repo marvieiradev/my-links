@@ -1,17 +1,17 @@
 "use client";
-import useMercadoPago from "@/app/hooks/useMercadoPago";
-import { useStripe } from "@/app/hooks/useStripe";
+//import useMercadoPago from "@/app/hooks/useMercadoPago";
+//import { useStripe } from "@/app/hooks/useStripe";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Payments() {
-  const {
+  /*const {
     createPaymentStripeCheckout,
     createSubscriptionStripeCheckout,
     handleCreateStripePortal,
   } = useStripe();
 
-  const { createMercadoPagoCheckout } = useMercadoPago();
+  const { createMercadoPagoCheckout } = useMercadoPago();*/
 
   return (
     <div className="flex flex-col justify-center items-center gap-8 m-auto p-4">

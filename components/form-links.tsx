@@ -14,13 +14,13 @@ const FormLinks = (props: FormLinksProps) => {
   const [user, setUser] = useState(props.userId);
   const [title, setTitle] = useState(props.title);
   const [subtitle, setSubtitle] = useState(props.subtitle);
-  const [tiltleLink1, setTiltleLink1] = useState("Intagram");
+  const [tiltleLink1, setTitleLink1] = useState("Intagram");
   const [urlLink1, setUrlLink1] = useState("https://www.instagram.com");
-  const [tiltleLink2, setTiltleLink2] = useState("Twitch");
+  const [tiltleLink2, setTitleLink2] = useState("Twitch");
   const [urlLink2, setUrlLink2] = useState("https://www.twitch.com");
-  const [tiltleLink3, setTiltleLink3] = useState("Linkedin");
+  const [tiltleLink3, setTitleLink3] = useState("Linkedin");
   const [urlLink3, setUrlLink3] = useState("https://www.linkedin.com");
-  const [tiltleLink4, setTiltleLink4] = useState("Github");
+  const [tiltleLink4, setTitleLink4] = useState("Github");
   const [urlLink4, setUrlLink4] = useState("https://www.github.com");
 
   const handleSave = () => {};
@@ -61,7 +61,7 @@ const FormLinks = (props: FormLinksProps) => {
               <Input
                 placeholder="Título do link"
                 value={tiltleLink1}
-                onChange={(e) => setTiltleLink1(e.target.value)}
+                onChange={(e) => setTitleLink1(e.target.value)}
               />
               <Input
                 placeholder="Url do link"
@@ -79,7 +79,7 @@ const FormLinks = (props: FormLinksProps) => {
               <Input
                 placeholder="Título do link"
                 value={tiltleLink2}
-                onChange={(e) => setTiltleLink2(e.target.value)}
+                onChange={(e) => setTitleLink2(e.target.value)}
               />
               <Input
                 placeholder="Url do link"
@@ -97,7 +97,7 @@ const FormLinks = (props: FormLinksProps) => {
               <Input
                 placeholder="Título do link"
                 value={tiltleLink3}
-                onChange={(e) => setUrlLink3(e.target.value)}
+                onChange={(e) => setTitleLink3(e.target.value)}
               />
               <Input
                 placeholder="Url do link"
@@ -115,7 +115,7 @@ const FormLinks = (props: FormLinksProps) => {
               <Input
                 placeholder="Título do link"
                 value={tiltleLink4}
-                onChange={(e) => setTiltleLink4(e.target.value)}
+                onChange={(e) => setTitleLink4(e.target.value)}
               />
               <Input
                 placeholder="Url do link"

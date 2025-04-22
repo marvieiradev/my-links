@@ -1,5 +1,5 @@
 import { Github, Instagram, Linkedin, Twitch } from "lucide-react";
-import { Button } from "./ui/button";
+//import { Button } from "./ui/button";
 
 interface PreviewProps {
   image: string;
